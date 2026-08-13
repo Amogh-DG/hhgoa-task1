@@ -58,20 +58,20 @@ export const POPULAR_TECH_STACKS = [
 ];
 
 export const DEFAULT_PASS: PassData = {
-  name: 'ALEX RIVERS',
+  name: '',
   vector: 'eng',
-  builderClass: 'PROTOCOL CYBER-ARCHITECT',
+  builderClass: '',
   clearance: 'TIER 01 - OMEGA',
-  serialNumber: 'HX-7729-OMEGA-2026',
+  serialNumber: '',
   photoUrl: null,
   photoFilter: 'cyber',
   zoom: 1,
-  techStack: ['Rust', 'Solana', 'TypeScript', 'React'],
-  xHandle: 'arivers_dev',
-  githubHandle: 'arivers',
-  issueTimestamp: '2026-10-28 09:00 IST',
+  techStack: [],
+  xHandle: '',
+  githubHandle: '',
+  issueTimestamp: '',
   hologramActive: true,
-  securityHash: '0x8F92A..GOA'
+  securityHash: '',
 };
 
 export const HACK_TRACKS: HackTrack[] = [

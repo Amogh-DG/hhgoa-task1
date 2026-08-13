@@ -288,7 +288,7 @@ export const PassGenerator: React.FC<PassGeneratorProps> = ({ pass, setPass, onF
                     <label className="font-label text-[11px] text-on-surface-variant uppercase tracking-wider block mb-2">
                       Cyber Photo Filter
                     </label>
-                    <div className="grid grid-cols-5 gap-1.5">
+                    <div className="flex flex-wrap gap-1.5">
                       {(['cyber', 'matrix', 'sunset', 'noir', 'raw'] as PhotoFilter[]).map(filter => (
                         <button
                           key={filter}
