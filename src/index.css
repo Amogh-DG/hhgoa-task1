@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #00180d;
+  --color-surface: #00180d;
+  --color-surface-dim: #00180d;
+  --color-surface-bright: #14412e;
+  --color-surface-container-lowest: #001209;
+  --color-surface-container-low: #002113;
+  --color-surface-container: #002517;
+  --color-surface-container-high: #00311f;
+  --color-surface-container-highest: #0e3c29;
+  --color-surface-variant: #0e3c29;
+  --color-on-surface: #bdedd2;
+  --color-on-surface-variant: #c9c8ab;
+  --color-inverse-surface: #bdedd2;
+  --color-inverse-on-surface: #083825;
+
+  --color-primary: #ffffff;
+  --color-primary-container: #e3ec00;
+  --color-primary-fixed: #e3ec00;
+  --color-primary-fixed-dim: #c7cf00;
+  --color-on-primary: #303300;
+  --color-on-primary-container: #646900;
+  --color-inverse-primary: #5e6300;
+
+  --color-secondary: #ffabf3;
+  --color-secondary-container: #fe00fe;
+  --color-on-secondary: #5b005b;
+  --color-on-secondary-container: #500050;
+  --color-secondary-fixed: #ffd7f5;
+  --color-secondary-fixed-dim: #ffabf3;
+
+  --color-tertiary: #ffffff;
+  --color-tertiary-container: #7df4ff;
+  --color-on-tertiary: #00363a;
+  --color-on-tertiary-container: #006f77;
+  --color-tertiary-fixed: #7df4ff;
+  --color-tertiary-fixed-dim: #00dbe9;
+
+  --color-outline: #929277;
+  --color-outline-variant: #474832;
+  --color-surface-tint: #c7cf00;
+
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  --font-display: Montserrat, sans-serif;
+  --font-headline: Montserrat, sans-serif;
+  --font-body: "JetBrains Mono", monospace;
+  --font-label: "JetBrains Mono", monospace;
+}
+
+body {
+  background-color: #00180d;
+  color: #bdedd2;
+  font-family: 'JetBrains Mono', monospace;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Blueprint Grid Overlay */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(227, 236, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(227, 236, 0, 0.05) 1px, transparent 1px);
+}
+
+/* Tech Cut Corner Shapes */
+.tech-cut {
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+}
+
+.tech-cut-lg {
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+}
+
+.cut-corner-reverse {
+  clip-path: polygon(0 12px, 12px 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Glitch Hover Effect */
+.glitch-hover:hover {
+  animation: jitter 0.15s infinite alternate;
+}
+
+@keyframes jitter {
+  0% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px) translateY(-0.5px); }
+  100% { transform: translateX(-1px) translateY(0.5px); }
+}
+
+/* Pulsing Dots & HUD glows */
+.pulse-dot {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; box-shadow: 0 0 0 0 rgba(254, 0, 254, 0.7); }
+  70% { opacity: 0.5; box-shadow: 0 0 0 6px rgba(254, 0, 254, 0); }
+  100% { opacity: 1; box-shadow: 0 0 0 0 rgba(254, 0, 254, 0); }
+}
+
+.glow-active:hover {
+  box-shadow: 0 0 12px 2px rgba(227, 236, 0, 0.3);
+}
+
+.glow-magenta:hover {
+  box-shadow: 0 0 12px 2px rgba(254, 0, 254, 0.4);
+}
+
+/* Spotlight & Holographic Foil Effect */
+.spotlight {
+  background: radial-gradient(circle at 50% 30%, rgba(227, 236, 0, 0.12) 0%, transparent 65%);
+}
+
+.holographic-overlay {
+  background: linear-gradient(125deg, rgba(255,255,255,0) 0%, rgba(254, 0, 254, 0.15) 35%, rgba(227, 236, 0, 0.25) 50%, rgba(125, 244, 255, 0.2) 65%, rgba(255,255,255,0) 80%);
+  background-size: 200% 200%;
+  animation: holoFlow 6s ease infinite;
+}
+
+@keyframes holoFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Scanning Line Animation */
+.scanline {
+  background: linear-gradient(to bottom, transparent 0%, rgba(227, 236, 0, 0.25) 50%, transparent 100%);
+  animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+  0% { top: -20%; }
+  100% { top: 120%; }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #00180d;
+}
+::-webkit-scrollbar-thumb {
+  background: #0e3c29;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e3ec00;
+}
