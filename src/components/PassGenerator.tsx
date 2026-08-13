@@ -584,7 +584,7 @@ export const PassGenerator: React.FC<PassGeneratorProps> = ({ pass, setPass, onF
 
                 <button
                   type="button"
-                  onClick={() => setCardFlipped(!cardFlipped)}
+                  //onClick={() => setCardFlipped(!cardFlipped)}
                   className="p-1.5 rounded bg-surface-container-low border border-surface-container-highest hover:border-primary-container text-on-surface-variant hover:text-primary transition-colors cursor-pointer"
                   title="Flip Pass Preview"
                 >
